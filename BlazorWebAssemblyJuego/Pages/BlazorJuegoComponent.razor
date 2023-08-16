@@ -1,0 +1,199 @@
+﻿@page "/"
+@using BlazorWebAssemblyJuego.Components
+
+
+<h1>Blazor Juego</h1>
+
+<div class="info-container">
+    <h2>Score: @score</h2>
+    <h2>Time remaining: @currentTime</h2>
+    <h2>@message</h2>
+</div>
+
+<div class="board">
+    @foreach(var s in Squares)
+    {
+        <Square SquareModel="s" OnMouseUp="() => MouseUp(s)" />
+    }
+</div>
+<br>
+<br>
+
+@code{
+    List<char> letters = new List<char>
+    {
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+        'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+        'U', 'V', 'W', 'X', 'Y', 'Z'
+    };
+
+    List<char> randomLetters = new List<char>();
+    Random random = new Random();
+
+    private void GenerateRandomLetters()
+    {
+        foreach (var square in Squares)
+        {
+            int randomIndex = random.Next(0, letters.Count);
+            square.RandomLetter = letters[randomIndex];
+        }
+    }
+
+    PeriodicTimer gameLoopTimer;
+    PeriodicTimer gameTimeTimer;
+
+    private void MouseUp(SquareModel s)
+    {
+        if (isGameRunning)
+        {
+            int SId = s.Id;
+            Squares[SId].IsShown = true;
+            StateHasChanged();
+            if(hitPosition1 == 100)
+            {
+                hitPosition1 = s.Id;
+                hitPosition2 = 100;
+            }
+            else if (hitPosition2 == 100)
+            {
+                hitPosition2 = s.Id;
+                ValidarSeleccion(hitPosition1, hitPosition2);
+                hitPosition1 = 100;
+                hitPosition2 = 100;
+                StateHasChanged();
+            }            
+        }
+    }
+    private void ValidarSeleccion(int Id1, int Id2)
+    {
+        // MORA
+        if(Id1 == 0 && Id2 == 3)
+        {
+            if (Letras[0] == 0)
+            {
+                Squares[0].IsShown = true;
+                Squares[1].IsShown = true;
+                Squares[2].IsShown = true;
+                Squares[3].IsShown = true;
+                score += 1;
+                Letras[0] = 1;
+            }
+        }
+        // FRESA
+        else if (Id1 == 9 && Id2 == 13)
+        {
+            if (Letras[1] == 0)
+            {
+                Squares[9].IsShown = true;
+                Squares[10].IsShown = true;
+                Squares[11].IsShown = true;
+                Squares[12].IsShown = true;
+                Squares[13].IsShown = true;
+                score += 1;
+                Letras[1] = 1;
+            }
+        }
+        // MANGO
+        else if (Id1 == 6 && Id2 == 34)
+        {
+            if (Letras[2] == 0)
+            {
+                Squares[6].IsShown = true;
+                Squares[13].IsShown = true;
+                Squares[20].IsShown = true;
+                Squares[27].IsShown = true;
+                Squares[34].IsShown = true;
+                score += 1;
+                Letras[2] = 1;
+            }
+        }
+        // MELON
+        else if (Id1 == 14 && Id2 == 42)
+        {
+            if (Letras[3] == 0)
+            {
+                Squares[14].IsShown = true;
+                Squares[21].IsShown = true;
+                Squares[28].IsShown = true;
+                Squares[35].IsShown = true;
+                Squares[42].IsShown = true;
+                score += 1;
+                Letras[3] = 1;
+            }
+        }
+        // LIMA
+        else if (Id1 == 28 && Id2 == 31)
+        {
+            if (Letras[4] == 0)
+            {
+                Squares[28].IsShown = true;
+                Squares[29].IsShown = true;
+                Squares[30].IsShown = true;
+                Squares[31].IsShown = true;
+                score += 1;
+                Letras[4] = 1;
+            }
+        }
+        // PIÑA
+        else if (Id1 == 45 && Id2 == 48)
+        {
+            if (Letras[5] == 0)
+            {
+                Squares[45].IsShown = true;
+                Squares[46].IsShown = true;
+                Squares[47].IsShown = true;
+                Squares[48].IsShown = true;
+                score += 1;
+                Letras[5] = 1;
+            }
+        }
+        // MANZANA
+        else if (Id1 == 0 && Id2 == 48)
+        {
+            if (Letras[6] == 0)
+            {
+                Squares[0].IsShown = true;
+                Squares[8].IsShown = true;
+                Squares[16].IsShown = true;
+                Squares[24].IsShown = true;
+                Squares[32].IsShown = true;
+                Squares[40].IsShown = true;
+                Squares[48].IsShown = true;
+                score += 1;
+                Letras[6] = 1;
+            }
+        }
+        else
+        {
+            Squares[hitPosition1].IsShown = false;
+            Squares[hitPosition2].IsShown = false;
+            if(score > 0)
+            {
+                score -= 1;
+            }
+        }
+    }
+
+    private async Task GameTimeAsync(PeriodicTimer timer)
+    {
+        while (isGameRunning)
+        {
+            currentTime--;
+            if(currentTime == 0)
+            {
+                message = "Game Ended!!!";
+                isGameRunning = false;
+            }
+            StateHasChanged();
+            await timer.WaitForNextTickAsync();
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        GenerateRandomLetters();
+        gameTimeTimer = new
+            PeriodicTimer(TimeSpan.FromSeconds(1));
+        _ = GameTimeAsync(gameTimeTimer);
+    }
+}

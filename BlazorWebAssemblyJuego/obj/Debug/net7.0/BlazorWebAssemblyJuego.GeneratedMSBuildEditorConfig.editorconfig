@@ -1,0 +1,37 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BlazorWebAssemblyJuego
+build_property.RootNamespace = BlazorWebAssemblyJuego
+build_property.ProjectDir = D:\Sebastian\Universidad\6to Semestre\Programación Integrativa\3er Parcial\BlazorWebAssemblyJuego\BlazorWebAssemblyJuego\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Sebastian\Universidad\6to Semestre\Programación Integrativa\3er Parcial\BlazorWebAssemblyJuego\BlazorWebAssemblyJuego
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Sebastian/Universidad/6to Semestre/Programación Integrativa/3er Parcial/BlazorWebAssemblyJuego/BlazorWebAssemblyJuego/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Sebastian/Universidad/6to Semestre/Programación Integrativa/3er Parcial/BlazorWebAssemblyJuego/BlazorWebAssemblyJuego/Components/Square.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTcXVhcmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Sebastian/Universidad/6to Semestre/Programación Integrativa/3er Parcial/BlazorWebAssemblyJuego/BlazorWebAssemblyJuego/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Sebastian/Universidad/6to Semestre/Programación Integrativa/3er Parcial/BlazorWebAssemblyJuego/BlazorWebAssemblyJuego/Pages/BlazorJuegoComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxhem9ySnVlZ29Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Sebastian/Universidad/6to Semestre/Programación Integrativa/3er Parcial/BlazorWebAssemblyJuego/BlazorWebAssemblyJuego/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Sebastian\\Universidad\\6to Semestre\\Programación Integrativa\\3er Parcial\\BlazorWebAssemblyJuego\\BlazorWebAssemblyJuego\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "D:\\Sebastian\\Universidad\\6to Semestre\\Programación Integrativa\\3er Parcial\\BlazorWebAssemblyJuego\\BlazorWebAssemblyJuego\\obj\\Debug\\net7.0\\build-gz\\X1N+v4eP.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "D:\\Sebastian\\Universidad\\6to Semestre\\Programación Integrativa\\3er Parcial\\BlazorWebAssemblyJuego\\BlazorWebAssemblyJuego\\obj\\Debug\\net7.0\\service-worker-assets.js",
+      "PackagePath": "staticwebassets\\service-worker-assets.js"
+    },
+    {
+      "Id": "D:\\Sebastian\\Universidad\\6to Semestre\\Programación Integrativa\\3er Parcial\\BlazorWebAssemblyJuego\\BlazorWebAssemblyJuego\\obj\\Debug\\net7.0\\service-worker\\service-worker.published.js",
+      "PackagePath": "staticwebassets\\service-worker.js"
+    },
+    {
+      "Id": "D:\\Sebastian\\Universidad\\6to Semestre\\Programación Integrativa\\3er Parcial\\BlazorWebAssemblyJuego\\BlazorWebAssemblyJuego\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "D:\\Sebastian\\Universidad\\6to Semestre\\Programación Integrativa\\3er Parcial\\BlazorWebAssemblyJuego\\BlazorWebAssemblyJuego\\wwwroot\\icon-512.png",
+      "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "D:\\Sebastian\\Universidad\\6to Semestre\\Programación Integrativa\\3er Parcial\\BlazorWebAssemblyJuego\\BlazorWebAssemblyJuego\\wwwroot\\img\\cara.png",
+      "PackagePath": "staticwebassets\\img\\cara.png"
+    },
+    {
+      "Id": "D:\\Sebastian\\Universidad\\6to Semestre\\Programación Integrativa\\3er Parcial\\BlazorWebAssemblyJuego\\BlazorWebAssemblyJuego\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\Sebastian\\Universidad\\6to Semestre\\Programación Integrativa\\3er Parcial\\BlazorWebAssemblyJuego\\BlazorWebAssemblyJuego\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorWebAssemblyJuego.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BlazorWebAssemblyJuego.props",
+      "PackagePath": "build\\BlazorWebAssemblyJuego.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorWebAssemblyJuego.props",
+      "PackagePath": "buildMultiTargeting\\BlazorWebAssemblyJuego.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BlazorWebAssemblyJuego.props",
+      "PackagePath": "buildTransitive\\BlazorWebAssemblyJuego.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,47 @@
+﻿<div class="square @SquareModel.Style" @onmouseup="ValidateHit">
+    @switch (SquareModel.Id)
+    {
+        case 0: case 6: case 14: case 30: <h1 class="definitivo">M</h1> break;
+        case 8: case 3: case 13: case 31: case 32: case 48: <h1 class="definitivo">A</h1> break;
+        case 11: case 21: <h1 class="definitivo">E</h1> break;
+        case 9: <h1 class="definitivo">F</h1> break;
+        case 27: <h1 class="definitivo">G</h1> break;
+        case 29: case 46: <h1 class="definitivo">I</h1> break;
+        case 28: <h1 class="definitivo">L</h1> break;
+        case 16: case 20: case 40: case 42: <h1 class="definitivo">N</h1> break;
+        case 47: <h1 class="definitivo">Ñ</h1> break;
+        case 1: case 34: case 35: <h1 class="definitivo">O</h1> break;
+        case 45: <h1 class="definitivo">P</h1> break;
+        case 2: case 10: <h1 class="definitivo">R</h1> break;
+        case 12: <h1 class="definitivo">S</h1> break;
+        case 24: <h1 class="definitivo">Z</h1> break;
+        default: <h1 class="definitivo">@SquareModel.RandomLetter</h1> break;
+    }
+</div>
+
+@code {
+    [Parameter]
+    public SquareModel SquareModel { get; set; }
+    [Parameter]
+    public EventCallback OnMouseUp { get; set; }
+
+    List<char> letters = new List<char>
+    {
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+        'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+        'U', 'V', 'W', 'X', 'Y', 'Z'
+    };
+
+    Random random = new Random();
+
+    private char GetRandomLetter()
+    {
+        int randomIndex = random.Next(0, letters.Count);
+        return letters[randomIndex];
+    }
+
+    private void ValidateHit()
+    {
+        OnMouseUp.InvokeAsync(new EventArgs());
+    }
+}
